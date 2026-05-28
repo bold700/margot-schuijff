@@ -1433,10 +1433,35 @@ a.service-card:focus-visible {
     padding: 84px 24px 84px;
     min-height: auto;
   }
-  .stage--static .cap--hero { min-height: 92vh; }
+  /* Hero: content verticaal gecentreerd, ruim onder de dock, met
+     genoeg ademruimte zodat titel + lede + knoppen netjes passen. */
+  .stage--static .cap--hero {
+    min-height: 88vh;
+    padding-top: 104px;
+    align-items: center;
+  }
   .cap--hero { text-align: left; justify-content: flex-start; }
-  .cap--hero .hero__actions { justify-content: flex-start; }
+  .cap--hero .hero__actions { justify-content: flex-start; flex-direction: column; align-items: stretch; gap: 12px; }
+  .cap--hero .hero__actions .btn { width: 100%; justify-content: center; }
   .cap--hero .hero__lede { margin-left: 0; }
+  /* Sterkere scrim + tekstschaduw op mobiel: het bovenste deel van de
+     hero-foto is licht, dus witte tekst heeft extra contrast nodig. */
+  .cap--hero .cap__video::after {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 10, 4, 0.55) 0%,
+      rgba(15, 10, 4, 0.40) 45%,
+      rgba(15, 10, 4, 0.78) 100%
+    );
+  }
+  .cap--hero .eyebrow,
+  .cap--hero .display,
+  .cap--hero .hero__lede {
+    text-shadow: 0 1px 24px rgba(15, 10, 4, 0.55);
+  }
+  .hero .display { font-size: clamp(2.6rem, 11vw, 3.6rem); margin-bottom: 22px; }
+  .hero .eyebrow { margin-bottom: 18px; }
+  .hero__lede { font-size: clamp(1.05rem, 4.4vw, 1.25rem); margin-bottom: 30px; }
 
   /* --- Over Margot: portret klein en gecentreerd, tekst links --- */
   .cap__about { text-align: left; gap: 22px; }
