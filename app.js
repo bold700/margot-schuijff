@@ -98,9 +98,10 @@
   /* ---- dock theme: flip text colour over dark sections ---- */
   const dock = document.querySelector(".dock");
   if (dock) {
-    const dockEls = Array.from(document.querySelectorAll("[data-dock]"));
     const probeY = 36;
     const checkDock = () => {
+      // Live query: in static-mode (mobiel) krijgen losse chapters data-dock
+      const dockEls = document.querySelectorAll("[data-dock]");
       let tone = "light";
       let veil = 0;
       for (const el of dockEls) {
@@ -135,7 +136,13 @@
          Used for reduced-motion and for small viewports, where a
          pinned crossfade does not suit the longer panels. */
       stage.classList.add("stage--static");
-      caps.forEach((c) => c.classList.add("is-active"));
+      // Per-chapter dock-thema: stage-level data-dock weghalen en op elke
+      // cap zetten o.b.v. tone, zodat het logo wit wordt over donkere chapters.
+      stage.removeAttribute("data-dock");
+      caps.forEach((c) => {
+        c.classList.add("is-active");
+        if (c.dataset.tone) c.dataset.dock = c.dataset.tone;
+      });
     } else if (N) {
       let activeIdx = -1;
 
