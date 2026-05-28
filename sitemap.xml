@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.schuijffrecruitmentenadvies.nl/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.schuijffrecruitmentenadvies.nl/media/ch00-hero.jpg</image:loc>
+      <image:title>Margot Schuijff — recruitment &amp; HR-partner</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.schuijffrecruitmentenadvies.nl/over</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.schuijffrecruitmentenadvies.nl/media/margot.jpg</image:loc>
+      <image:title>Over Margot Schuijff</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.schuijffrecruitmentenadvies.nl/werkwijze</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.schuijffrecruitmentenadvies.nl/media/ch04-richting.jpg</image:loc>
+      <image:title>Werkwijze van Margot Schuijff</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.schuijffrecruitmentenadvies.nl/voor-bedrijven</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.schuijffrecruitmentenadvies.nl/media/ch02-recruitment.jpg</image:loc>
+      <image:title>Recruitment voor bedrijven</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.schuijffrecruitmentenadvies.nl/voor-kandidaten</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.schuijffrecruitmentenadvies.nl/media/ch05-transitie.jpg</image:loc>
+      <image:title>Voor professionals die hun volgende stap nemen</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.schuijffrecruitmentenadvies.nl/recruitmentadvies</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.schuijffrecruitmentenadvies.nl/media/ch01-kern.jpg</image:loc>
+      <image:title>Recruitmentadvies</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.schuijffrecruitmentenadvies.nl/werving-selectie</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.schuijffrecruitmentenadvies.nl/media/ch03-instroom.jpg</image:loc>
+      <image:title>Werving &amp; selectie</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.schuijffrecruitmentenadvies.nl/senior-search</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.schuijffrecruitmentenadvies.nl/media/ch08-slot.jpg</image:loc>
+      <image:title>Senior of specialistische search</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.schuijffrecruitmentenadvies.nl/contact</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

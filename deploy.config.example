@@ -1,0 +1,29 @@
+# ==============================================================
+# Margot Schuijff — TransIP deploy-config
+# --------------------------------------------------------------
+# Kopieer dit bestand naar `deploy.config` (zonder .example) en
+# vul je TransIP SSH-gegevens in. `deploy.config` staat in
+# .gitignore zodat secrets niet in git komen.
+#
+# Run daarna:   ./deploy.sh --dry-run     (preview)
+#               ./deploy.sh               (live)
+# ==============================================================
+
+# SSH-server van TransIP shared hosting.
+# Vaak: ssh.transip.email of serverNN.transip.host
+# Vind je terug in TransIP control panel → WebHosting → "FTP / SSH".
+SSH_HOST="ssh.transip.email"
+
+# SSH-gebruikersnaam (zelfde als FTP-gebruikersnaam bij TransIP).
+SSH_USER="example-username"
+
+# SSH-poort (standaard 22; TransIP gebruikt 22).
+SSH_PORT="22"
+
+# Pad op de server waar de site moet komen.
+# Mogelijke locaties bij TransIP:
+#   ~/domains/margotschuijff.nl/public_html
+#   ~/httpdocs
+#   /home/USER/public_html
+# Check via SSH: 'ls -la ~' na inloggen om de juiste map te zien.
+REMOTE_PATH="domains/margotschuijff.nl/public_html"

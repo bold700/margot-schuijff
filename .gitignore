@@ -1,0 +1,13 @@
+.DS_Store
+*.bak
+
+# Deploy secrets — gebruik deploy.config.example als template
+deploy.config
+
+# Python dev-server logs
+/tmp/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
