@@ -452,11 +452,13 @@ body.menu-open .dock__menu-btn {
 .stage__track {
   position: relative;
   height: calc(var(--ch-count, 6) * 100vh);
+  height: calc(var(--ch-count, 6) * 100dvh);
 }
 .stage__pin {
   position: sticky;
   top: 0;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -803,9 +805,9 @@ a.service-card:focus-visible {
   .service-card { padding: 22px 22px; }
 }
 @media (max-width: 1100px) {
-  /* Alleen de 3-services-grid wordt swipe-scrollable op tablet; de 4-fases-grid
-     past nu netjes in 2x2 zonder horizontale scroll. */
-  .cap[data-ch="3"] .cap__services-grid {
+  /* 3-diensten-grid wordt swipe-scrollable op tablet + mobiel, op ELKE pagina
+     (homepage ch3 én voor-bedrijven ch2). */
+  .cap__services-grid {
     display: flex;
     flex-direction: row;
     grid-template-columns: none;
@@ -820,33 +822,33 @@ a.service-card:focus-visible {
     scrollbar-width: thin;
     scrollbar-color: var(--accent) transparent;
   }
-  .cap[data-ch="3"] .cap__services-grid.is-grabbing {
+  .cap__services-grid.is-grabbing {
     cursor: grabbing;
     scroll-snap-type: none;
   }
-  .cap[data-ch="3"] .cap__services-grid::-webkit-scrollbar { height: 4px; }
-  .cap[data-ch="3"] .cap__services-grid::-webkit-scrollbar-track {
+  .cap__services-grid::-webkit-scrollbar { height: 4px; }
+  .cap__services-grid::-webkit-scrollbar-track {
     background: rgba(243, 236, 224, 0.12);
     border-radius: 4px;
   }
-  .cap[data-ch="3"] .cap__services-grid::-webkit-scrollbar-thumb {
+  .cap__services-grid::-webkit-scrollbar-thumb {
     background: var(--accent);
     border-radius: 4px;
   }
   @media (hover: none) {
-    .cap[data-ch="3"] .cap__services-grid { scrollbar-width: none; }
-    .cap[data-ch="3"] .cap__services-grid::-webkit-scrollbar { display: none; }
+    .cap__services-grid { scrollbar-width: none; }
+    .cap__services-grid::-webkit-scrollbar { display: none; }
   }
-  .cap[data-ch="3"] .cap__services-grid > .service-card {
+  .cap__services-grid > .service-card {
     flex: 0 0 min(78%, 360px);
     scroll-snap-align: start;
   }
-  .cap[data-ch="3"] .cap__services-grid > .service-card:last-child {
+  .cap__services-grid > .service-card:last-child {
     margin-right: 8px;
   }
 }
 @media (max-width: 520px) {
-  .cap[data-ch="3"] .cap__services-grid > .service-card { flex: 0 0 82%; }
+  .cap__services-grid > .service-card { flex: 0 0 82%; }
 }
 
 /* --- hero caption (left-aligned, ruimte voor de video aan rechterkant) --- */
@@ -1483,15 +1485,48 @@ a.service-card:focus-visible {
   /* --- Compacter op mobiel: pinned chapters moeten in 100vh passen --- */
   .cap__services-head { margin-bottom: 16px; }
   .cap__services-head .cap__title { font-size: clamp(1.5rem, 6.5vw, 2rem); }
-  .cap__steps-grid { gap: 10px; }
-  .service-card--step { padding: 13px 14px; }
   .service-card--step .service-card__num { font-size: 0.8rem; margin-bottom: 0; }
-  .service-card--step .service-card__title { font-size: 0.95rem; }
-  .service-card--step .service-card__body { font-size: 0.78rem; line-height: 1.4; }
-  .cap__about .portrait,
-  .cap__about .portrait--arch { max-height: 185px; }
+  .service-card--step .service-card__title { font-size: 1rem; }
+  .service-card--step .service-card__body { font-size: 0.85rem; line-height: 1.45; }
+
+  /* Werkwijze-fases: horizontale swipe-carousel op mobiel i.p.v. 2x2 grid */
+  .cap__steps-grid {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: none;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    margin: 0 -24px;
+    padding: 4px 24px 22px;
+    scrollbar-width: none;
+  }
+  .cap__steps-grid::-webkit-scrollbar { display: none; }
+  .cap__steps-grid > .service-card--step {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+    padding: 22px 22px 28px;
+  }
+  .cap__steps-grid > .service-card--step:last-child { margin-right: 8px; }
   .cap__about { gap: 16px; }
   .cap[data-ch="5"] .about__body p { font-size: 0.9rem; line-height: 1.5; }
+  /* Alle portret-varianten op mobiel → één nette arch-vorm met behouden
+     aspect-ratio (geen squish meer van pill/organic/notch). */
+  .cap__about .portrait,
+  .cap__about .portrait--arch,
+  .cap__about .portrait--pill,
+  .cap__about .portrait--organic,
+  .cap__about .portrait--notch,
+  .cap__about .portrait--frame {
+    max-width: 200px;
+    max-height: none;
+    aspect-ratio: 4 / 5;
+    border-radius: 50% 50% 16px 16px / 26% 26% 16px 16px;
+    margin: 0 auto;
+  }
+  .cap__about .portrait__img { border-radius: inherit; }
 
   /* --- Referenties op mobiel: gewone native horizontale swipe,
      geen scroll-jack meer. --- */
