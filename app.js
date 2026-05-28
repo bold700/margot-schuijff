@@ -129,12 +129,10 @@
     const progress = stage.querySelector(".stage__progress span");
     const counter = document.getElementById("capnum");
     const N = caps.length;
-    const isNarrow = window.matchMedia("(max-width: 700px)").matches;
 
-    if (reduced || isNarrow) {
+    if (reduced) {
       /* static fallback: unpin, every chapter visible and stacked.
-         Used for reduced-motion and for small viewports, where a
-         pinned crossfade does not suit the longer panels. */
+         Alleen bij reduced-motion — scrollytelling draait nu ook op mobiel. */
       stage.classList.add("stage--static");
       // Per-chapter dock-thema: stage-level data-dock weghalen en op elke
       // cap zetten o.b.v. tone, zodat het logo wit wordt over donkere chapters.

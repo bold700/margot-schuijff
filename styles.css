@@ -1480,6 +1480,19 @@ a.service-card:focus-visible {
     padding-left: 16px;
   }
 
+  /* --- Compacter op mobiel: pinned chapters moeten in 100vh passen --- */
+  .cap__services-head { margin-bottom: 16px; }
+  .cap__services-head .cap__title { font-size: clamp(1.5rem, 6.5vw, 2rem); }
+  .cap__steps-grid { gap: 10px; }
+  .service-card--step { padding: 13px 14px; }
+  .service-card--step .service-card__num { font-size: 0.8rem; margin-bottom: 0; }
+  .service-card--step .service-card__title { font-size: 0.95rem; }
+  .service-card--step .service-card__body { font-size: 0.78rem; line-height: 1.4; }
+  .cap__about .portrait,
+  .cap__about .portrait--arch { max-height: 185px; }
+  .cap__about { gap: 16px; }
+  .cap[data-ch="5"] .about__body p { font-size: 0.9rem; line-height: 1.5; }
+
   /* --- Referenties op mobiel: gewone native horizontale swipe,
      geen scroll-jack meer. --- */
   .quotes__head { text-align: left; max-width: none; margin: 0 0 22px; }
